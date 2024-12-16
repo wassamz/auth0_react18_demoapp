@@ -36,7 +36,7 @@ REACT_APP_AUTH0_CALLBACK_URL=http://localhost:4040/callback
 REACT_APP_AUTH0_AUDIENCE=AUTH0-AUDIENCE
 ```
 
-**_NOTE:_** For the Sign Up to work, you need to enable Username-Password-Authentication on your Applciation account. Auth0 Dashboard > Autehntication > Database
+**_NOTE:_** For the Sign Up to work, you need to enable Username-Password-Authentication on your Application account. Auth0 Dashboard > Autehntication > Database
 
 Next, execute the following command to run the JSON server API:
 

@@ -21,7 +21,7 @@ export const Auth0Features = () => {
     {
       title: 'Auth0 SignUp',
       description:
-        'Create Free Auth0 Account. Note: For the Sign Up to work, you need to enable Username-Password-Authentication on your Applciation account. Auth0 Dashboard > Autehntication > Database',
+        'Create Free Auth0 Account. Note: For the Sign Up to work, you need to enable Username-Password-Authentication on your Application account. Auth0 Dashboard > Autehntication > Database',
       resourceUrl: 'https://auth0.com/signup',
       icon: 'img/auth0-svgrepo-com.svg',
     },
