@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { CodeSnippet } from "../components/code-snippet";
-import { PageLayout } from "../components/page-layout";
-import { getAdminResource } from "../services/message.service";
+import { useAuth0 } from '@auth0/auth0-react';
+import React, { useEffect, useState } from 'react';
+import { CodeSnippet } from '../components/code-snippet';
+import { PageLayout } from '../components/page-layout';
+import { getAdminResource } from '../services/message.service';
 
 export const AdminPage = () => {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
+
+  const { getAccessTokenSilently } = useAuth0();
 
   useEffect(() => {
     let isMounted = true;
 
     const getMessage = async () => {
-      const { data, error } = await getAdminResource();
+      const accessToken = await getAccessTokenSilently();
+      const { data, error } = await getAdminResource(accessToken);
 
       if (!isMounted) {
         return;
@@ -30,7 +34,7 @@ export const AdminPage = () => {
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [getAccessTokenSilently]);
 
   return (
     <PageLayout>
@@ -46,7 +50,7 @@ export const AdminPage = () => {
             </span>
             <span>
               <strong>
-                Only authenticated users with the{" "}
+                Only authenticated users with the{' '}
                 <code>read:admin-messages</code> permission should access this
                 page.
               </strong>

@@ -1,5 +1,5 @@
-import React from "react";
-import { MobileNavBarTab } from "./mobile-nav-bar-tab";
+import React from 'react';
+import { MobileNavBarTab } from './mobile-nav-bar-tab';
 
 export const MobileNavBarTabs = ({ handleClick }) => {
   return (

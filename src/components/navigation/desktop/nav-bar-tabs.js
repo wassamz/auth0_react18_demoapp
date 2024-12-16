@@ -1,5 +1,5 @@
-import React from "react";
-import { NavBarTab } from "./nav-bar-tab";
+import React from 'react';
+import { NavBarTab } from './nav-bar-tab';
 
 export const NavBarTabs = () => {
   return (

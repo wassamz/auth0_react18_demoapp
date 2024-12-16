@@ -1,14 +1,18 @@
-# React/JavaScript: Starter SPA Code Sample
+# React/JavaScript: Starter Auth0 App Tutorial
 
-This JavaScript code sample demonstrates how to build a Single-Page Application (SPA) using React. This React code sample builds the API server using the React Router 6 library.
+This application has been modified from [Auth0 training documentation](https://developer.auth0.com/resources/guides/spa/react/basic-authentication). The app using Single Sign On using **Auth0 Universal Login** and protects routes via the React Router.
+
+This code sample uses the following tools:
+
+- React v18.2.0
+- React Router v6.3.0
+- Auth0 React SDK v2.0.0
+
+Additional code samples can be found [here ](https://developer.auth0.com/resources/code-samples/full-stack).
 
 Visit the ["React/JavaScript Code Samples: SPA Security in Action"](https://developer.auth0.com/resources/code-samples/spa/react) section of the ["Auth0 Developer Resources"](https://developer.auth0.com/resources) to explore how you can secure React applications written in JavaScript by implementing endpoint protection and authorization with Auth0.
 
 [![React/JavaScript Code Samples: SPA Security in Action](https://cdn.auth0.com/blog/hub/code-samples/spa/react-javascript.png)](https://developer.auth0.com/resources/code-samples/spa/react)
-
-## Why Use Auth0?
-
-Auth0 is a flexible drop-in solution to add authentication and authorization services to your applications. Your team and organization can avoid the cost, time, and risk that come with building your own solution to authenticate and authorize users. We offer tons of guidance and SDKs for you to get started and [integrate Auth0 into your stack easily](https://developer.auth0.com/resources/code-samples/full-stack).
 
 ## Set Up and Run the React Project
 
@@ -26,7 +30,13 @@ The compatible API server runs on `http://localhost:6060` by default. As such, t
 
 ```bash
 REACT_APP_API_SERVER_URL=http://localhost:6060
+REACT_APP_AUTH0_DOMAIN=<your auth0 domain>.auth0.com
+REACT_APP_AUTH0_CLIENT_ID=<your client id>
+REACT_APP_AUTH0_CALLBACK_URL=http://localhost:4040/callback
+REACT_APP_AUTH0_AUDIENCE=AUTH0-AUDIENCE
 ```
+
+**_NOTE:_** For the Sign Up to work, you need to enable Username-Password-Authentication on your Applciation account. Auth0 Dashboard > Autehntication > Database
 
 Next, execute the following command to run the JSON server API:
 

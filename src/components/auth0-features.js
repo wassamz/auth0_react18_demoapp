@@ -1,41 +1,44 @@
-import React from "react";
-import { Auth0Feature } from "./auth0-feature";
+import React from 'react';
+import { Auth0Feature } from './auth0-feature';
 
 export const Auth0Features = () => {
   const featuresList = [
     {
-      title: "Identity Providers",
+      title: 'Auth0 QuickStart',
       description:
-        "Auth0 supports social providers such as Google, Facebook, and Twitter, along with Enterprise providers such as Microsoft Office 365, Google Apps, and Azure. You can also use any OAuth 2.0 Authorization Server.",
-      resourceUrl: "https://auth0.com/docs/connections",
-      icon: "https://cdn.auth0.com/blog/hello-auth0/identity-providers-logo.svg",
+        'This application has been modified from training documentation to use Auth0 with React v18. Click to follow the instructions.',
+      resourceUrl:
+        'https://developer.auth0.com/resources/guides/spa/react/basic-authentication#integrate-react-with-an-api-server',
+      icon: 'https://cdn.auth0.com/blog/hello-auth0/identity-providers-logo.svg',
     },
     {
-      title: "Multi-Factor Authentication",
+      title: 'Multi-Factor Authentication',
       description:
-        "You can require your users to provide more than one piece of identifying information when logging in. MFA delivers one-time codes to your users via SMS, voice, email, WebAuthn, and push notifications.",
-      resourceUrl: "https://auth0.com/docs/multifactor-authentication",
-      icon: "https://cdn.auth0.com/blog/hello-auth0/mfa-logo.svg",
+        'You can require your users to provide more than one piece of identifying information when logging in. MFA delivers one-time codes to your users via SMS, voice, email, WebAuthn, and push notifications.',
+      resourceUrl: 'https://auth0.com/docs/multifactor-authentication',
+      icon: 'https://cdn.auth0.com/blog/hello-auth0/mfa-logo.svg',
     },
     {
-      title: "Attack Protection",
+      title: 'Auth0 SignUp',
       description:
-        "Auth0 can detect attacks and stop malicious attempts to access your application such as blocking traffic from certain IPs and displaying CAPTCHA. Auth0 supports the principle of layered protection in security that uses a variety of signals to detect and mitigate attacks.",
-      resourceUrl: "https://auth0.com/docs/attack-protection",
-      icon: "https://cdn.auth0.com/blog/hello-auth0/advanced-protection-logo.svg",
+        'Create Free Auth0 Account. Note: For the Sign Up to work, you need to enable Username-Password-Authentication on your Applciation account. Auth0 Dashboard > Autehntication > Database',
+      resourceUrl: 'https://auth0.com/signup',
+      icon: 'img/auth0-svgrepo-com.svg',
     },
+
     {
-      title: "Serverless Extensibility",
+      title: 'Geting API Started',
       description:
-        "Actions are functions that allow you to customize the behavior of Auth0. Each action is bound to a specific triggering event on the Auth0 platform. Auth0 invokes the custom code of these Actions when the corresponding triggering event is produced at runtime.",
-      resourceUrl: "https://auth0.com/docs/actions",
-      icon: "https://cdn.auth0.com/blog/hello-auth0/private-cloud-logo.svg",
+        'Create the .env file and in a separate terminal run the command: npm run api',
+      resourceUrl:
+        'https://developer.auth0.com/resources/guides/spa/react/basic-authentication#quick-react-setup',
+      icon: 'https://cdn.auth0.com/blog/hello-auth0/private-cloud-logo.svg',
     },
   ];
 
   return (
     <div className="auth0-features">
-      <h2 className="auth0-features__title">Explore Auth0 Features</h2>
+      <h2 className="auth0-features__title">Demo Auth0 Features</h2>
       <div className="auth0-features__grid">
         {featuresList.map((feature) => (
           <Auth0Feature

@@ -1,17 +1,17 @@
-import React from "react";
-import { MobileMenuToggleButton } from "./mobile-menu-toggle-button";
-import { MobileNavBarBrand } from "./mobile-nav-bar-brand";
-import { MobileNavBarButtons } from "./mobile-nav-bar-buttons";
-import { MobileNavBarTabs } from "./mobile-nav-bar-tabs";
+import React from 'react';
+import { MobileMenuToggleButton } from './mobile-menu-toggle-button';
+import { MobileNavBarBrand } from './mobile-nav-bar-brand';
+import { MobileNavBarButtons } from './mobile-nav-bar-buttons';
+import { MobileNavBarTabs } from './mobile-nav-bar-tabs';
 
 const MobileMenuState = {
-  CLOSED: "closed",
-  OPEN: "open",
+  CLOSED: 'closed',
+  OPEN: 'open',
 };
 
 const MobileMenuIcon = {
-  CLOSE: "close",
-  MENU: "menu",
+  CLOSE: 'close',
+  MENU: 'menu',
 };
 
 export const MobileNavBar = () => {
@@ -27,13 +27,13 @@ export const MobileNavBar = () => {
   };
 
   const closeMobileMenu = () => {
-    document.body.classList.remove("mobile-scroll-lock");
+    document.body.classList.remove('mobile-scroll-lock');
     setMobileMenuState(MobileMenuState.CLOSED);
     setMobileMenuIcon(MobileMenuIcon.MENU);
   };
 
   const openMobileMenu = () => {
-    document.body.classList.add("mobile-scroll-lock");
+    document.body.classList.add('mobile-scroll-lock');
     setMobileMenuState(MobileMenuState.OPEN);
     setMobileMenuIcon(MobileMenuIcon.CLOSE);
   };

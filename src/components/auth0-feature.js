@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const Auth0Feature = ({ title, description, resourceUrl, icon }) => (
   <a
@@ -12,6 +12,8 @@ export const Auth0Feature = ({ title, description, resourceUrl, icon }) => (
         className="auth0-feature__icon"
         src={icon}
         alt="external link icon"
+        width="64"
+        heigh="64"
       />
       {title}
     </h3>
